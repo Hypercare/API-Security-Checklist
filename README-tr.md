@@ -1,4 +1,4 @@
-[English](./README.md) | [中文版](./README-zh.md) | [Português (Brasil)](./README-pt_BR.md) | [Français](./README-fr.md) | [한국어](./README-ko.md) | [Nederlands](./README-nl.md) | [Indonesia](./README-id.md) | [ไทย](./README-th.md) | [Русский](./README-ru.md) | [Українська](./README-uk.md) | [Español](./README-es.md) | [Italiano](./README-it.md) | [日本語](./README-ja.md) | [Deutsch](./README-de.md) | [Tiếng Việt](./README-vi.md) | [Монгол](./README-mn.md) | [हिंदी](./README-hi.md)
+[English](./README.md) | [繁中版](./README-tw.md) | [簡中版](./README-zh.md) | [Português (Brasil)](./README-pt_BR.md) | [Français](./README-fr.md) | [한국어](./README-ko.md) | [Nederlands](./README-nl.md) | [Indonesia](./README-id.md) | [ไทย](./README-th.md) | [Русский](./README-ru.md) | [Українська](./README-uk.md) | [Español](./README-es.md) | [Italiano](./README-it.md) | [日本語](./README-ja.md) | [Deutsch](./README-de.md) | [Tiếng Việt](./README-vi.md) | [Монгол](./README-mn.md) | [हिंदी](./README-hi.md) | [العربية](./README-ar.md) | [Polski](./README-pl.md) | [Македонски](.README-mk.md) | [ລາວ](./README-lo.md)
 
 # API Güvenlik Kontrol Listesi
 API'nizi tasarlarken, test ederken ve yayınlarken en önemli güvenlik önlemlerinin kontrol listesi.
@@ -42,7 +42,7 @@ API'nizi tasarlarken, test ederken ve yayınlarken en önemli güvenlik önlemle
 - [ ] Kullanıcı kendi kaynak ID'sinden kaçınmalıdır. `/me/orders` yerine `/user/654321/orders` kullanmalıdır.
 - [ ] Otomotik artan ID'ler kullanmayın. Yerine `UUID` kullanın.
 - [ ] Eğer XML dosyarını (parse) ayrıştırıyorsanız, varlık ayrıştırmasını önlemek için etkin olmadığını doğrulayın `XXE` (XML external entity attack).
-- [ ] Eğer XML dosyarını (parse) ayrıştırıyorsanız, `Billion Laughs/XML bomb` varlık genişletme saldırısı yoluyla,varlığın genişlemesinin önlemek için etkinleştirilmediğinden emin olun .
+- [ ] Eğer XML dosyarını (parse) ayrıştırıyorsanız, `Billion Laughs/XML bomb` varlık genişletme saldırısı yoluyla,varlığın genişlemesinin önlemek için etkinleştirilmediğinden emin olun.
 - [ ] Dosya yüklemeleri için bir CDN kullanın.
 - [ ] Büyük miktarda veri ile uğraşıyorsanız, HTTP engellemeyi önlemek için İşçi ve Kuyrukları arka planda olabildiğince işlem yapmak ve yanıtı hızlı bir şekilde yanıtlamak için kullanın.
 - [ ] DEBUG modunu kapatmayı unutmayın!.
@@ -52,7 +52,7 @@ API'nizi tasarlarken, test ederken ve yayınlarken en önemli güvenlik önlemle
 - [ ] `X-Frame-Options: deny` header'ı gönder.
 - [ ] `Content-Security-Policy: default-src 'none'` header'ı gönder.
 - [ ] Parmak izi başlıklarını kaldırın - `X-Powered-By`, `Server`, `X-AspNet-Version` v.b.
-- [ ] Force `content-type` for your response, if you return `application/json` then your response `content-type` is `application/json`.
+- [ ] Response'unda `content-type` kullanmaya zorla, eğer veriyi `application/json` olarak döndürürsen, `content-type` karşılığı `application/json` olur.
 - [ ] Hassas verilerinizi geri göndermeyin `credentials`, `Passwords`, `security tokens`.
 - [ ] İşlem tamamlandıktan sonra uygun durum kodunu döndürür. (ör. `200 OK`, `400 Bad Request`, `401 Unauthorized`, `405 Method Not Allowed`, v.b.).
 
